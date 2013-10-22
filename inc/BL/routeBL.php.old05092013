@@ -1,0 +1,173 @@
+<?php
+
+require_once(dirname(__FILE__)."/../DAO/routeDAO.php");
+/**
+* 
+*/
+class routeBL
+{
+	protected $routename;
+	protected $routepointA;
+	protected $routepointB;
+	protected $routeprice;
+	protected $transtype;
+	protected $routedistance;
+	protected $routeids;
+	protected $routeid;
+	protected $startpoint;
+
+	function __construct()
+	{
+		if(isset($_POST['addroute']))
+		{
+			$this->routename = $_POST['routename'];
+			$this->routepointA = $_POST['routepointA'];
+			$this->routepointB = $_POST['routepointB'];
+			$this->routeprice = $_POST['routeprice'];
+			$this->transtype = $_POST['transtype'];
+			$this->routedistance = $_POST['routedistance'];
+
+			$this->addroute();
+			header("location:../admin.php?panel=viewroutepanel");
+		}
+		elseif (isset($_POST['deleteroute'])) {
+			$this->routeids = $_POST['routes'];
+			foreach ($this->routeids as $id) {
+				$this->deleteroute($id);
+			}
+			header("location:../admin.php?panel=routepanel");
+		}
+		elseif (isset($_POST['updateroute'])) {
+			$this->routeid = $_POST['routeid'];
+			$this->routename = $_POST['routename'];
+			$this->routepointA = $_POST['routepointA'];
+			$this->routepointB = $_POST['routepointB'];
+			$this->routeprice = $_POST['routeprice'];
+			$this->transtype = $_POST['transtype'];
+			$this->routedistance = $_POST['routedistance'];
+
+			$this->updateroute();
+			header("location:../admin.php?panel=viewroutepanel");
+		}
+		elseif(isset($_POST['findroute'])){
+			$id = $_POST['id'];
+			$this->routepointA = $_POST['routepointA'];
+			$this->routepointB = $_POST['routepointB'];
+			echo "Point A is ".$this->routepointA."<br/>";
+			echo "Point B is ".$this->routepointB."<br/>";
+
+
+
+			// Check if there are direct routes from the two locations
+
+			$Aroutes = $this->getroutesbyplaceA($this->routepointA);
+			$Broutes = $this->getroutesbyplaceB($this->routepointA);
+
+			//print_r($Aroutes);
+
+			echo "<br/>";
+			echo "<br/>";
+			echo "<br/>";
+			//print_r($Broutes);
+
+			if ($Aroutes != null) {
+				foreach ($Aroutes as $Aroute) {
+					if($Aroute['r_pointB'] == $this->routepointB)
+					{
+						session_start();
+						unset($_SESSION['singleroute']);
+						unset($_SESSION['routes']);
+						$_SESSION['singleroute'] = $Aroute;
+						header("location:../individual.php?placeid=".$id."&pointA=".$this->routepointA."&pointB=".$this->routepointB);
+						return false;
+					}
+				}
+			}
+			if ($Broutes != null){
+				foreach ($Broutes as $Broute) {
+					if($Broute['r_pointA'] == $this->routepointB)
+					{
+						session_start();
+						unset($_SESSION['singleroute']);
+						unset($_SESSION['routes']);
+						$_SESSION['singleroute'] = $Broute;
+						header("location:../individual.php?placeid=".$id."&pointA=".$this->routepointA."&pointB=".$this->routepointB);	
+						return false;
+					}
+				}
+			}
+			// If there are no direct routes do the following
+
+			$firstroutes = $this->getroutesbyplace($this->routepointA);
+			$secondroutes = $this->getroutesbyplace($this->routepointB);
+
+
+			if($firstroutes != null && $secondroutes != null)
+			{
+				
+				//Compare the two routes if they have a location in common
+				session_start();
+				foreach($firstroutes as $firstroute)
+				{
+					foreach($secondroutes as $secondroute) {
+						if((($firstroute['r_pointA'] == $this->routepointA) && ($firstroute['r_pointB'] == $secondroute['r_pointA'] ||
+							$firstroute['r_pointB'] == $secondroute['r_pointB'])) ||
+							(($firstroute['r_pointB'] == $this->routepointA) && ($firstroute['r_pointA'] == $secondroute['r_pointA'] ||
+								$firstroute['r_pointA'] == $secondroute['r_pointB']))){
+							
+							unset($_SESSION['singleroute']);
+						//echo $firstroute['r_name']."<br/>";
+						//echo $secondroute['r_name'];
+						//return false;
+						unset($_SESSION['routes']);
+						$_SESSION['routes'] = array();
+						$_SESSION['routes']['firstroute'] = $firstroute;
+						$_SESSION['routes']['secondroute'] = $secondroute;
+					}
+				}
+				header("location:../individual.php?placeid=".$id."&pointA=".$this->routepointA."&pointB=".$this->routepointB);	
+			}
+		}
+	}
+}
+
+function getroutesbyplace($routeplace)
+{
+	$routeDAO = new routeDAO();
+	$routes = $routeDAO->getroutesbyplace($routeplace);
+	return $routes;		
+}
+function getroutesbyplaceA($routeplace)
+{
+	$routeDAO = new routeDAO();
+	$routes = $routeDAO->getroutesbyplaceA($routeplace);
+	return $routes;		
+}
+
+function getroutesbyplaceB($routeplace)
+{
+	$routeDAO = new routeDAO();
+	$routes = $routeDAO->getroutesbyplaceB($routeplace);
+	return $routes;		
+}
+function addroute()
+{
+	$routeDAO = new routeDAO();
+	$routeDAO->addroute($this->routename,$this->routepointA,$this->routepointB,$this->routeprice,
+		$this->transtype,$this->routedistance);
+}
+function updateroute()
+{
+	$routeDAO = new routeDAO();
+	$routeDAO->updateroute($this->routeid,$this->routename,$this->routepointA,$this->routepointB,$this->routeprice,
+		$this->transtype,$this->routedistance);
+}
+function deleteroute($id)
+{
+	$routeDAO = new routeDAO();
+	$routeDAO->deleteroute($id);
+}
+}
+
+$routeBL = new routeBL();
+?>
