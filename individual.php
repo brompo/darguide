@@ -1,4 +1,4 @@
-    <?php include(dirname(__FILE__)."/inc/include/session.php");?>
+<?php include(dirname(__FILE__)."/inc/include/session.php");?>
     <!DOCTYPE html>
     <html>
     <head>
@@ -169,7 +169,7 @@
     <br/>
     <div class="routecontainer">
       Find the route to this place<br/>
-      <form action="BL/routeBL.php" method="POST">
+      <form action="inc/BL/routeBL.php" method="POST">
         <input type="text" name="id" value="<?php echo $place['id']; ?>" hidden="true">
         From:
         <select name="routefrom">
@@ -185,10 +185,8 @@
         }
         ?>
       </select></br>
-      To :  <select name="routeto">
-            <option value="<?php echo $place['nearestPoint'] ?>" ><?php echo $place['name'] ?></option>
-      </select></br>
-      <input type="input" name="routepointB" value="<?php echo $place['nearestPoint']; ?>" hidden="true">
+      To :  <?php echo $place['name']; ?>
+      <input type="input" name="routeto" value="<?php echo $place['nearestPoint']; ?>" hidden="true"></br>
       <input type="submit" value="find a route" name="findroute" class="btn btn-small btn-primary">
     </form>
   </div>
