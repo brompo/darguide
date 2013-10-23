@@ -174,8 +174,6 @@
         From:
         <select name="routefrom">
          <?php
-
-         
          if ($routeplaces != null)
          {
           foreach($routeplaces as $routeplace)

@@ -29,7 +29,7 @@ class routeBL
 			$id = $_POST['id'];
 			if($this->from == $this->to){
 				$message = "From and To can not be the same location, please change and search again";
-				header("location:../individual.php?placeid=".$id."&error=".$message);
+				header("location:../../individual.php?placeid=".$id."&error=".$message);
 			}
 			else{
 				// Find Direct Route;
@@ -39,7 +39,7 @@ class routeBL
 				$bus = $directroute['bus_id'];
 				$deststop = $directroute['stop_no'];
 				$from = $this->from;
-				header("location:../individual.php?placeid=".$id."&to=".$to."&from=".$from."&bus=".$bus."&deststop=".$deststop);
+				header("location:../../individual.php?placeid=".$id."&to=".$to."&from=".$from."&bus=".$bus."&deststop=".$deststop);
 				}
 				else{
 					$changingplaces = array (1,2,8,21);
@@ -58,7 +58,7 @@ class routeBL
 							$deststop2 = $directroute2['stop_no'];
 							$from2 = $changingplace;
 
-				header("location:../individual.php?placeid=".$id."&to1=".$to1."&from1=".$from1."&bus1=".$bus1."&deststop1=".$deststop1.
+				header("location:../../individual.php?placeid=".$id."&to1=".$to1."&from1=".$from1."&bus1=".$bus1."&deststop1=".$deststop1.
 				"&to2=".$to2."&from2=".$from2."&bus2=".$bus2."&deststop2=".$deststop2);			
 							}
 						}

@@ -158,7 +158,26 @@
   <div class="forminput"><label>Service 3:</label><input type="text" name="service3" id="service3" maxlength="100"></div>
   <div class="forminput"><label>Service 4:</label><input type="text" name="service4" id="service4" maxlength="100"></div>
   <div class="forminput"><label>Service 5:</label><input type="text" name="service5" id="service5" maxlength="100">
-    <div class="forminput"><label>Nearest Point:</label><input type="text" name="nearestpoint" id="nearestpoint" maxlength="50" ></div>
+    <!--<div class="forminput"><label>Nearest Point:</label><input type="text" name="nearestpoint" id="nearestpoint" maxlength="50" ></div>-->
+<div class="forminput"><label>Nearest Point</label>
+      <select name="nearestpoint" id="nearestpoint">
+       <?php
+       $routelocations = $routeDAO->getplaces();
+       if ($routelocations != null)
+       {
+        foreach($routelocations as $routelocation)
+        {
+          ?>
+          <option value="<?php echo $routelocation['id'] ?>"><?php echo $routelocation['name'] ?></option>
+          <?php
+        }
+      }
+      ?>
+
+    </select></div>
+
+
+
     <label>Direction:</label><textarea name="direction" cols="30" rows="7"  id="direction" maxlength="200"></textarea></br>
     <div class="forminput"><label>Working Hours:</label><input type="text" name="workinghours" id="workinghours" maxlength="50" ></div>
     <div class="forminput"><label>Email:</label><input type="text" name="email" id="email" maxlength="50" ></div>
