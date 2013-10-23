@@ -77,7 +77,7 @@
               <div class ="row-fluid news">
               <div class="para">
               <h5><b><?php echo $news['heading']?></b></h5>
-                <p><?php echo $news['description'];?><a href="<?php echo $news['link']?>">...... read more</a></p>
+                <p><?php echo $news['description'];?><a href="<?php echo $news['link']?>" target="_blank">...... read more</a></p>
               </div>
               </div>
               <?php
