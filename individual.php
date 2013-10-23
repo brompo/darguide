@@ -173,6 +173,7 @@
         <input type="text" name="id" value="<?php echo $place['id']; ?>" hidden="true">
         From:
         <select name="routefrom">
+        <option value="" selected="selected">Select an option</option>
          <?php
          if ($routeplaces != null)
          {
@@ -273,7 +274,11 @@
     {
       echo "<b>Error: </b><text style='color:red'>".$_GET['error']."</text><br/>";
     }
+    else{
+      echo $place['direction'];
+    }
    ?>
+    }
  </div>
 </div>
 </div>

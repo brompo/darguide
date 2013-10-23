@@ -1,7 +1,5 @@
 <?php
 
-
-
 require_once(dirname(__FILE__)."/../DAO/routeDAO.php");
 /**
 * 
@@ -27,9 +25,14 @@ class routeBL
 			$this->from = $_POST['routefrom'];
 			$this->to = $_POST['routeto'];
 			$id = $_POST['id'];
-			if($this->from == $this->to){
-				$message = "From and To can not be the same location, please change and search again";
+			if($this->from == ""){
+				$message = "Please select where do you want directions from";
 				header("location:../../individual.php?placeid=".$id."&error=".$message);
+			}
+			if($this->from == $this->to){
+				//$message = "From and To can not be the same location, please change and search again";
+				//header("location:../../individual.php?placeid=".$id."&error=".$message);
+				header("location:../../individual.php?placeid=".$id);
 			}
 			else{
 				// Find Direct Route;
