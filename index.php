@@ -32,6 +32,11 @@
 
       ?>
       <div class ="container contena"> 
+        <div class="row">
+          <div class="col-md-9 col-md-push-3">The big container</div>
+          <div class="col-md-3 col-md-pull-9"> The Small Container</div>
+        </div>
+
 
         <!-- Top Menu  -->
         <?php include('inc/include/header.php'); ?>
