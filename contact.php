@@ -35,7 +35,7 @@
           <!-- Top Menu  -->
 
           <div class ="row col-lg-12">
-            <div class ="col-lg-6">
+            <div class ="col-lg-6 col-lg-offset-2">
 
                 <h5 class="header-about">Thanks for visiting us</h5>
                 Aethere hominum, origo secant siccis lacusque aeris carentem parte matutinis fulminibus zephyro

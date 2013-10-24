@@ -63,7 +63,7 @@
        <div class="row">
         <div class="col-lg-8">
           <div class="gallery">
-            <img src="images/<?php echo $picture['place_id'].'/'.$picture['name']; ?>" />
+            <img src="images/<?php echo $picture['place_id'].'/'.$picture['name']; ?>" class="img-responsive" />
           </div>
         </div>
         <div class = "col-lg-4">
@@ -278,7 +278,6 @@
       echo $place['direction'];
     }
    ?>
-    }
  </div>
 </div>
 </div>
