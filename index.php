@@ -1,4 +1,4 @@
-    <?php include(dirname(__FILE__)."/inc/include/session.php");?>
+<?php include(dirname(__FILE__)."/inc/include/session.php");?>
     <!DOCTYPE html>
     <html>
     <head>
@@ -32,11 +32,6 @@
 
       ?>
       <div class ="container contena"> 
-        <div class="row">
-          <div class="col-md-9 col-md-push-3">The big container</div>
-          <div class="col-md-3 col-md-pull-9"> The Small Container</div>
-        </div>
-
 
         <!-- Top Menu  -->
         <?php include('inc/include/header.php'); ?>
@@ -45,22 +40,22 @@
         <div class="row">
          <div class="col-lg-4">
            <div class="maingallery">
-            <img src="images/14.jpg"></img>
-            <img src="images/0.jpg"></img>
+            <img src="images/68.jpg"></img>
+            <img src="images/43.jpg"></img>
           </div>
         </div>
 
         <div class="col-lg-4">
           <div class="maingallery">
-            <img src="images/0.jpg"></img>
-            <img src="images/9.jpg"></img>
+            <img src="images/43.jpg"></img>
+            <img src="images/34.jpg"></img>
           </div>
         </div>
 
         <div class="col-lg-4">
           <div class="maingallery">
-            <img src="images/12.jpg"></img>
-            <img src="images/0.jpg"></img>
+            <img src="images/70.jpg"></img>
+            <img src="images/44.jpg"></img>
           </div>
         </div>
 
@@ -145,44 +140,26 @@
  <div class="hot-gallery">
 
 
-  <a href="images/1.jpg" ><img src="images/thumb_1.jpg"></img></a>
-  <a href="images/2.jpg"><img src="images/thumb_2.jpg"></img></a>
-  <a href="images/1.jpg" ><img src="images/thumb_1.jpg"></img></a>
-  <a href="images/4.jpg"><img src="images/thumb_4.jpg"></img></a>
-  <a href="images/1.jpg" ><img src="images/thumb_1.jpg"></img></a>
-  <a href="images/2.jpg"><img src="images/thumb_2.jpg"></img></a>
-  <a href="images/1.jpg" ><img src="images/thumb_1.jpg"></img></a>
-  <a href="images/4.jpg"><img src="images/thumb_4.jpg"></img></a>
-  <a href="images/1.jpg" ><img src="images/thumb_1.jpg"></img></a>
-  <a href="images/2.jpg"><img src="images/thumb_2.jpg"></img></a>
-  <a href="images/1.jpg" ><img src="images/thumb_1.jpg"></img></a>
-  <a href="images/4.jpg"><img src="images/thumb_4.jpg"></img></a>
-  <a href="images/1.jpg" ><img src="images/thumb_1.jpg"></img></a>
-  <a href="images/2.jpg"><img src="images/thumb_2.jpg"></img></a>
-  <a href="images/1.jpg" ><img src="images/thumb_1.jpg"></img></a>
-  <a href="images/4.jpg"><img src="images/thumb_4.jpg"></img></a>
-  <a href="images/1.jpg" ><img src="images/thumb_1.jpg"></img></a>
-  <a href="images/2.jpg"><img src="images/thumb_2.jpg"></img></a>
-  <a href="images/1.jpg" ><img src="images/thumb_1.jpg"></img></a>
-  <a href="images/4.jpg"><img src="images/thumb_4.jpg"></img></a>
+  <a href="../images/60.jpg" ><img src="../images/thumb_60.jpg"></img></a>
+  <a href="../images/61.jpg"><img src="../images/thumb_61.jpg"></img></a>
+  <a href="../images/62.jpg" ><img src="../images/thumb_62.jpg"></img></a>
+  <a href="../images/63.jpg"><img src="../images/thumb_63.jpg"></img></a>
+  <a href="../images/64.jpg" ><img src="../images/thumb_64.jpg"></img></a>
+  <a href="../images/65.jpg"><img src="../images/thumb_65.jpg"></img></a>
+  <a href="../images/66.jpg" ><img src="../images/thumb_66.jpg"></img></a>
+  <a href="../images/67.jpg"><img src="../images/thumb_67.jpg"></img></a>
+  <a href="../images/68.jpg" ><img src="../images/thumb_68.jpg"></img></a>
+  <a href="../images/69.jpg"><img src="../images/thumb_69.jpg"></img></a>
+   <a href="../images/66.jpg" ><img src="../images/thumb_66.jpg"></img></a>
+  <a href="../images/67.jpg"><img src="../images/thumb_67.jpg"></img></a>
+  <a href="../images/68.jpg" ><img src="../images/thumb_68.jpg"></img></a>
+  <a href="../images/69.jpg"><img src="../images/thumb_69.jpg"></img></a>
+   <a href="../images/69.jpg"><img src="../images/thumb_69.jpg"></img></a>
 
 
 
 </div>
-<div class = "advert">
-  <p></p>
-  <h5>Share this on</h5>
-  <div class="addthis_toolbox addthis_default_style addthis_32x32_style">
-    <a class="addthis_button_preferred_1"></a>
-    <a class="addthis_button_preferred_2"></a>
-    <a class="addthis_button_preferred_3"></a>
-    <a class="addthis_button_preferred_4"></a>
-    <a class="addthis_button_compact"></a>
-    <a class="addthis_counter addthis_bubble_style"></a>
-  </div>
-  <!-- <script type="text/javascript" src="//s7.addthis.com/js/300/addthis_widget.js#pubid=xa-5124f20505304da1"></script>-->
 
-</div>
 </div>
 </div>
 

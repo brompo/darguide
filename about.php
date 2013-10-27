@@ -39,45 +39,49 @@
          <div class="row">
           <h3>About Us</h3>
           <p>
-            Aethere hominum, origo secant siccis lacusque aeris carentem parte matutinis fulminibus zephyro
-            hominum, origo secant siccis lacusque aeris carentem parte matutinis fulminibus zephyro.
-            Aethere hominum, origo secant siccis lacusque aeris carentem parte matutinis fulminibus zephyro
-            hominum, origo secant siccis lacusque aeris carentem parte matutinis fulminibus zephyro</p><br/>
+             Dar es salaam is a very exciting typical East African city. Foreigners from abroad 
+          land to this city for their activities not only foreigners but also natives, 
+            however sometime they found difficult on looking for place and different location in Dar es salaam.
+We aim to develop application, into which  user will access  information about Dar es salaam, 
+that will focus on Transport, hospitals, entertainment, hotels, police stations.
+</p><br/>
 
-            <h4>Who made this site</h4>
+             <h4>Who made this site</h4>
           </div><!-- /row-->
 
           <div class="row">
 
             <div class="col-lg-4">
               <div class="pictures">
-                <img src="images/6.jpg"></img>
+                <img src="../images/6.jpg"></img>
                 <h5 class ="name">Abdalah Salim</h5>
-                <p>Oigo secant siccis lacusque aeris carentem parte matutinis fulminibus zephyro
-                  hominum, origo secant siccis lacusque aeris carentem parte matutinis fulminibus Aether.</p>
+                <p>
+        My name is Abdallah Salim 
+        Currently i am a four year student of ISNE  at St Joseph college of engineering and technology.
+        </p>
 
                 </div><!--pictures-->
               </div><!--col-lg-3-->
 
               <div class="col-lg-4">
                 <div class="pictures">
-                  <img src="images/11.jpg"></img>
+                  <img src="../images/11.jpg"></img>
                   <h5 class ="name">Lilian Machange</h5>
                   <p>
-                    Recant siccis lacusque aeris carentem parte matutinis fulminibus zephyro
-                    hominum, origo secant siccis lacusque aeririgo secant siccis lacusque aeris carentem parte matutinis fulminibus zephyro</p>
+          My name is Lilian Machange
+        Currently i am a four year student of ISNE  at St Joseph college of engineering and technology.
+                    </p>
 
                   </div><!--pictures-->
                 </div><!--col-lg-3-->
 
                 <div class="col-lg-4">
                   <div class="pictures">
-                   <img src="images/10.jpg"></img>
+                   <img src="../images/10.jpg"></img>
                    <h5 class ="name">Ludovic Kimolo</h5>
                    <p>
-                     Aethere hominum, origo secant siccis lacusque aeris carentem parte matutinis fulminibus zephyro
-                     hominum, origo secant siccis lacusque aeris carentem parte matutinis.</p>
-
+           My name is Ludovic Kimolo 
+        Currently i am a four year student of ISNE  at St Joseph college of engineering and technology.
                    </div><!--pictures-->
                  </div><!--col-lg-3-->
 

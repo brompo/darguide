@@ -112,7 +112,7 @@ class session
 	$_SESSION['user'] = $user;
 	    if ($user != null)
 	    {
-		$_SESSION['errors']['registerError'] = "user already exists";
+		$_SESSION['errors']['registerError'] = "user saved";
 			$_SESSION['numerrors'] = count($_SESSION['errors']); // redo the counting of errors
 	    }
 		else{

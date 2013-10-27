@@ -122,12 +122,7 @@
       <li><?php echo $place['service5'];?></li>
     </ul>
 
-    Unda suis addidi animus unus ulla mutatas et cum aere undae recepta grandia habendum siccis illi ventis ante est corpora coercuit
-    undas partim galeae illis recessit obsistitur pontus feras premuntur
-
-    Tempora montes nullus astra alto iussit formaeque otia fontes pluvialbulas gravitate utque ora homo sublime quia sibi consistere. 
-    Tempora montes nullus astra alto iussit formaeque otia fontes pluvialbulas gravitate utque ora homo sublime quia sibi consistere. 
-
+   
 
   </div>
   <div class = "col-lg-4 pictures">
@@ -139,7 +134,7 @@
     To get in touch with us please use the following addresses</br></br>
 
     <b>Physical Address:</b> <?php echo $location['name'];?></br>
-    Box 111</br>
+   
     Dar es salaam, Tanzania</br></br>
 
     <b>Email:</b> <?php echo $place['email']; ?></p>
@@ -149,9 +144,7 @@
 
   </div>
   <div class = "col-lg-4">
-    <div class="advert">
-      <img src="images/171.jpg"></img>
-    </div>
+    
     <div class ="lates">Share this on</div>
     <div class="addthis_toolbox addthis_default_style addthis_32x32_style">
       <a class="addthis_button_preferred_1"></a>

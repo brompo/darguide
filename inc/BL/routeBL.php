@@ -45,7 +45,7 @@ class routeBL
 				header("location:../../individual.php?placeid=".$id."&to=".$to."&from=".$from."&bus=".$bus."&deststop=".$deststop);
 				}
 				else{
-					$changingplaces = array (1,2,8,21);
+					$changingplaces = array (1,2,8,21,35,39,46);
 					foreach ($changingplaces as $changingplace) {
 						if(($directroute1 = $this->findroute($this->from,$changingplace)) != false)
 						{

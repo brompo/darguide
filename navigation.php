@@ -51,13 +51,12 @@
             <div class="col-lg-8">
               <div class="row">
                 <!--  Images at the Left side of the page  -->
-                <div class="col-sm-4 col-sm-4 col-sm-push-7 banner">
-                  <img src="images/13.jpg"></img>
-                  <img src="images/9.jpg"></img>
-                  <img src="images/8.jpg"></img>
+                <div class="col-lg-4 banner">
+                  <img src="images/341.jpg"></img>
+               <!--   <img src="images/5.jpg"></img>-->
                 </div>
 
-                <div class="col-sm-7 col-sm-7 col-sm-pull-3 list">
+                <div class="col-lg-7 list">
                   <div class="page">
                     <?php
                     if (array_key_exists('name', $_GET))

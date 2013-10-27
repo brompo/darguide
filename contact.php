@@ -35,13 +35,12 @@
           <!-- Top Menu  -->
 
           <div class ="row col-lg-12">
-            <div class ="col-lg-6 col-lg-offset-2">
+            <div class ="col-lg-6">
 
-                <h5 class="header-about">Thanks for visiting us</h5>
-                Aethere hominum, origo secant siccis lacusque aeris carentem parte matutinis fulminibus zephyro
-                hominum, origo secant siccis lacusque aeris carentem parte matutinis fulminibus zephyro.
-                Aethere hominum, origo secant siccis lacusque aeris carentem parte matutinis fulminibus zephyro
-                hominum, origo secant siccis lacusque aeris carentem parte matutinis fulminibus zephyro.<br><br>
+                 <h5 class="header-about">Thanks for visiting us</h5>
+                The progress of this site depend on the number of user and we all consider that yours are our aim costomers so we thank you in advance 
+                For advice or any matter we put in concern please contact us or you can send to us Mails 
+            <br><br>
                 <h5 class ="physical">Physical address</h5>
                 St Joseph College Of Engineering</br>
                 P.O.BOX 1212</br>

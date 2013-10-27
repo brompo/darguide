@@ -97,13 +97,14 @@ function connectionclose()
         return $conn;
     }
     */
+
 }
 
 
 // Connnection to Dar Guide Database
-$darguideconnection = new mysqlconnection("localhost","root","ruth","darguide");
+//$darguideconnection = new mysqlconnection("localhost","root","ruth","darguide");
 //$darguideconnection = new mysqlconnection("localhost","880751_admin","darguide","darguide_zzl_darguide");
-//$darguideconnection = new mysqlconnection('mysql16.000webhost.com','a5712235_darguid','darguid3','a5712235_darguid');
+$darguideconnection = new mysqlconnection('mysql16.000webhost.com','a5712235_darguid','darguid3','a5712235_darguid');
 
 
 ?>
